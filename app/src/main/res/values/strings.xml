@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Recipe Book</string>
+    <string name="button"> Create an account</string>
+    <string name="text">Sausage and</string>
+    <string name="explore"> Explore more recipes</string>
+    <string name="profile_name">David Opeyemi</string>
+    <string name="about"> Combining data,design and machine learning to build intelligent products and services that improves
+    peoples lives.</string>
+    <string name="edit"> Ground Nut</string>
+    <string name="text2"> So what is going on?</string>
+    <string name="text3"> A selection of chicken dishes served together on a white table.This is comfort food heaven.</string>
+
+
+    <string name="faved_recipe"> Waffle Berries Closeup</string>
+    <string name="bernette"> Courtney Bennett</string>
+    <string name="first_ingredient"> 1/2 cup water</string>
+    <string name="second_ingredients"> 1/4 cup cornmeal</string>
+    <string name="third_ingredient"> 2 tablespoons butter</string>
+    <string name="fourth_ingredient"> 1/4 cup molasses</string>
+    <string name="fifth_ingredient"> 3 cups all-purpose flour, divided </string>
+    <string name="sixth_ingredient"> 1 teaspoon salt </string>
+    <string name="button_name"> See directions for preparation </string>
+    <string name="my_name"> Folarin Isaac</string>
+    <string name="isaac_chat"> A selection of chicken dishes served together...</string>
+    <string name="button1"> 3 Similar Recipes to try out </string>
+    <string-array name="chats_interface">
+        <item> Folarin Isaac</item>
+        <item> Ogunmakin Afolashade</item>
+        <item> Folarin Adenike</item>
+        <item> Patrick Delight</item>
+        <item> Ebhitiga Joshua</item>
+        <item> Onyeasigbulem Arinze</item>
+        <item> Olorunsola Emmanuel</item>
+    </string-array>
+
+    <string-array name="description">
+        <item> A selection of chicken dishes served together</item>
+        <item> A selection of chicken dishes served together</item>
+        <item> A selection of chicken dishes served together</item>
+        <item> A selection of chicken dishes served together</item>
+        <item> A selection of chicken dishes served together</item>
+        <item> A selection of chicken dishes served together</item>
+        <item> A selection of chicken dishes served together</item>
+
+
+    </string-array>
+
+    <string-array name="home_interface">
+        <item> Folarin Isaac Sent you a message </item>
+        <item> Ogunmakin Afolashade replied your message </item>
+        <item> 20 people added your recipe as favourite</item>
+        <item> 10 people viewed your profile </item>
+        <item> Obakemi Great added a new recipe </item>
+        <item> Bakare Emma removed a recipe </item>
+    </string-array>
+
+    <string-array name="home_description">
+        <item> Yesterday </item>
+        <item> Sunday 22nd March </item>
+        <item> Thursday 15th March </item>
+        <item> Wednesday 30th April </item>
+        <item> Monday 25th April </item>
+        <item> Wednesday 19th April </item>
+
+    </string-array>
+
+    <string name="Femi"> Folarin Isaac Sent you a message</string>
+    <string name="Ogunmakin"> Ogunmakin Mary replied your message</string>
+    <string name="Ogunmakin_date"> Sunday 22nd March</string>
+    <string name="People"> 20 people added your recipe as favourite</string>
+    <string name="People_date"> Thursday 15th March</string>
+    <string name="Profile"> 10 people viewed your profile</string>
+    <string name="profile_date"> Wednesday 30th April </string>
+    <string name="Great"> Obakemi Great added a new recipe</string>
+    <string name="great_date"> Monday 25th April</string>
+    <string name="Emmanuel"> Bakare Emmauel removed a recipe</string>
+    <string name="emma_date"> Wednesday 19th April </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
