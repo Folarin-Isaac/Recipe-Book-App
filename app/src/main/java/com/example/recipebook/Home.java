@@ -45,54 +45,53 @@ public class Home extends AppCompatActivity {
 
 
 // CardView to open another activity when clicked
-        card_view1.setOnClickListener(new View.OnClickListener() {
+     card_view1.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View v) {
+             Intent intent = new Intent(Home.this, Recipe.class);
+             startActivity(intent);
+         }
+     });
+     //cardView to open the chats activity when clicked
+     card_view2.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View v) {
+             Intent intent = new Intent(Home.this, Chats.class);
+             startActivity(intent);
+         }
+     });
+     //cardView to open the Networks activity when clicked
+        card_view3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Faved_Recipe.class);
+                Intent intent = new Intent(Home.this, Networks.class);
                 startActivity(intent);
-
-                card_view2.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent1 = new Intent(Home.this, Chats.class);
-                        startActivity(intent1);
-
-                        card_view3.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Intent intent2 = new Intent(Home.this, Networks.class);
-                                startActivity(intent2);
-
-                                card_view4.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        Intent intent3 = new Intent(Home.this, Friends.class);
-                                        startActivity(intent3);
-
-                                        card_view5.setOnClickListener(new View.OnClickListener() {
-                                            @Override
-                                            public void onClick(View v) {
-                                                Intent intent4 = new Intent(Home.this, favourites.class);
-                                                startActivity(intent4);
-
-                                                card_view6.setOnClickListener(new View.OnClickListener() {
-                                                    @Override
-                                                    public void onClick(View v) {
-                                                        Intent intent5 = new Intent(Home.this, Profile.class);
-                                                        startActivity(intent5);
-                                                    }
-                                                });
-                                            }
-                                        });
-                                    }
-                                });
-                            }
-                        });
-                    }
-                });
             }
         });
+        //cardView to open the friends activity when clicked
+        card_view4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, Friends.class);
+                startActivity(intent);
+            }
+        });
+        //cardView to open the favourites activity when clicked
+        card_view5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, favourites.class);
+                startActivity(intent);
+            }
+        });
+        //cardView to open the Profile activity when clicked
+        card_view6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, Profile.class);
+                startActivity(intent);
+            }
+        });
+            }
+        }
 
-
-    }
-}
