@@ -11,14 +11,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> {
-    String data1[], data2[];
+    String firstData[], secondData[];
     int images[];
     Context context;
 
-    public HomeAdapter(Context ct, String s1[], String s2[], int img[]){
+    public HomeAdapter(Context ct, String name[], String message[], int img[]){
         context = ct;
-        data1 = s1;
-        data2 = s2;
+        firstData = name;
+        secondData = message;
         images = img;
     }
     @NonNull
@@ -31,8 +31,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.textView1.setText(data1[position]);
-        holder.textView2.setText(data2[position]);
+        holder.textView1.setText(firstData[position]);
+        holder.textView2.setText(secondData[position]);
         holder.image1.setImageResource(images[position]);
 
 
