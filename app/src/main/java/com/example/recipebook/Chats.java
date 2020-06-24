@@ -10,7 +10,7 @@ import android.os.Bundle;
 public class Chats extends AppCompatActivity {
     RecyclerView recyclerView;
 
-    String s1[], s2[];
+    String name[], message[];
     int images[] = {R.drawable.david_opeyemi, R.drawable.david_opeyemi, R.drawable.david_opeyemi, R.drawable.david_opeyemi, R.drawable.david_opeyemi,
             R.drawable.adebayo, R.drawable.adedunni};
 
@@ -24,10 +24,10 @@ public class Chats extends AppCompatActivity {
         recyclerView.addItemDecoration(divider);
 
 
-        s1 = getResources().getStringArray(R.array.chats_interface);
-        s2 = getResources().getStringArray(R.array.description);
+        name = getResources().getStringArray(R.array.chats_interface);
+        message = getResources().getStringArray(R.array.description);
 
-        MyAdapter myAdapter = new MyAdapter(this, s1, s2, images);
+        MyAdapter myAdapter = new MyAdapter(this, name, message, images);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
