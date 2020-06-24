@@ -5,6 +5,7 @@
     <corners android:topRightRadius="30dp"
         android:topLeftRadius="30dp"/>
     <stroke android:color="#000000"
-        android:dashWidth="2dp"/>
+        android:dashWidth="2dp"
+        android:width="2dp"/>
 
 </shape>

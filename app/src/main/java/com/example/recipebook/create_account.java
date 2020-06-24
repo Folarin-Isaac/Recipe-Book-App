@@ -40,7 +40,7 @@ public class create_account extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
 
         if (fAuth.getCurrentUser() !=null){
-            startActivity(new Intent(getApplicationContext(),Home.class));
+            startActivity(new Intent(getApplicationContext(),login_notification.class));
             finish();
         }
 
@@ -74,7 +74,7 @@ public class create_account extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(create_account.this, "User has been created.", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),Home.class));
+                            startActivity(new Intent(getApplicationContext(),login_notification.class));
                         }else {
                             Toast.makeText(create_account.this, "Error has occurred"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             
@@ -82,21 +82,6 @@ public class create_account extends AppCompatActivity {
 
                     }
                 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             }
         });

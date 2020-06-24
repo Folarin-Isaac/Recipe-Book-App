@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        app:layout_constraintGuide_percent="0.15"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -27,6 +22,7 @@
         android:text="Welcome David"/>
 
     <ImageView
+        android:id="@+id/image1"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
@@ -36,18 +32,19 @@
         android:layout_marginRight="20dp"
         android:src="@drawable/david_opeyemi"/>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint_layout1"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
         android:layout_width="0dp"
+        app:cardCornerRadius="8dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline"
-        android:background="@drawable/card_view">
+        app:layout_constraintTop_toBottomOf="@id/image1"
+        android:layout_marginTop="16dp">
 
         <RelativeLayout
             android:id="@+id/relative_layout"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
@@ -55,14 +52,14 @@
             android:layout_marginRight="10dp"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="@id/constraint_layout1"
-            app:layout_constraintEnd_toEndOf="@id/constraint_layout1"
-            app:layout_constraintTop_toTopOf="@id/constraint_layout1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="25dp"
             app:layout_constraintHorizontal_weight="1">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view1"
-                android:layout_width="110dp"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="10dp"
                 android:layout_alignParentTop="true"
@@ -95,7 +92,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view2"
-                android:layout_width="110dp"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerInParent="true"
                 android:layout_alignParentTop="true"
@@ -126,8 +123,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view3"
-                android:layout_width="110dp"
-                android:layout_height="97dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginStart="10dp"
@@ -159,14 +156,15 @@
 
             </androidx.cardview.widget.CardView>
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/relative_layout2"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="120dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/relative_layout"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="140dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginEnd="10dp"
@@ -174,7 +172,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view4"
-                android:layout_width="110dp"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="10dp"
                 android:layout_alignParentTop="true"
@@ -207,7 +205,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view5"
-                android:layout_width="110dp"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerInParent="true"
                 android:layout_alignParentTop="true"
@@ -238,7 +236,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view6"
-                android:layout_width="110dp"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginRight="5dp"
@@ -262,7 +260,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="60dp"
-                    android:text="Networks"
+                    android:text="Uploads"
                     android:textSize="15sp"
                     android:textColor="#FFBD49"
                     android:layout_gravity="center_horizontal"
@@ -272,37 +270,57 @@
             </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
 
-        <TextView
-            android:id="@+id/text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/relative_layout2"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:textSize="20sp"
-            android:textColor="#34A853"
-            android:textStyle="bold"
-            android:text="Notifications"/>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/materialCardView"
+        android:background="#000000"
+        android:alpha="0.2"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text1"/>
+    <TextView
+        android:id="@+id/notifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"
+        android:textColor="#34A853"
+        android:text="Notifications"
+        android:textStyle="bold"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        android:layout_marginEnd="15dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginRight="15dp"
+        android:text="clear notifications"
+        android:textColor="#B4C2D3"
+        android:textAllCaps="false"
+        android:background="@drawable/goggle_round"
+        android:layout_marginTop="10dp"/>
 
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notifications"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"/>
 
-
-
-
-
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
