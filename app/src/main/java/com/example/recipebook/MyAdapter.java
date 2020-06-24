@@ -13,14 +13,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
-    String data1[], data2[];
+    String firstData[], secondData[];
     int images[];
     Context context;
 
-    public MyAdapter(Context ct, String s1[], String s2[], int img[]){
+    public MyAdapter(Context ct, String name[], String message[], int img[]){
         context = ct;
-        data1 = s1;
-        data2 = s2;
+        firstData = name;
+        secondData = message;
         images = img;
 
     }
@@ -36,8 +36,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.myText1.setText(data1[position]);
-        holder.myText2.setText(data2[position]);
+        holder.myText1.setText(firstData[position]);
+        holder.myText2.setText(secondData[position]);
         holder.myImage.setImageResource(images[position]);
 
     }
